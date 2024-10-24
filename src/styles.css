@@ -1,0 +1,163 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* Background color */
+}
+
+form{
+    display: flex;
+    position: relative;
+    top: 40vh;
+    justify-content: center;
+    height: 80px;
+    transition: top 0.5s ease;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: 100%;
+    background-color: #e4fafd;
+    border-radius: 15px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4); /* Dark shadow with some blur */
+}
+.search-container{
+    border-radius: 20px 0 0 20px;
+    width: 60%;
+    height: 40px;
+    font-size: 20px;
+    margin-right: 5px;
+    padding-left: 10px;
+    font-family: "poppins", Arial, sans-serif;
+}
+
+.magnifying-glass{
+    height: 30px;
+    width: auto;
+}
+
+.search-button{
+    border-radius: 0 20px 20px 0;
+    border: 0px;
+    box-shadow: 10px 10px 15px rgba(0.1, 0.1, 0.1, 0.1);
+    height: 46px;
+    padding: 6px;
+    background: linear-gradient(to right, #FDC830, #F37335);
+}
+
+.weather-container-container{
+    position: relative;
+    justify-content: center;
+    top: 25vh;
+    opacity: 0; /* Start invisible */
+    visibility: hidden; /* Prevent interaction */
+    transition: opacity 1s ease, visibility 1s ease;
+    display: flex;
+}
+.weather-container-container.visible{
+    position: relative;
+    justify-content: center;
+    top: 25vh;
+    opacity: 0; /* Start invisible */
+    visibility: hidden; /* Prevent interaction */
+    transition: opacity 1s ease, visibility 1s ease;
+    display: flex;
+}
+
+.weather-container{
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    width: 85%;
+    height: 600px;
+}   
+
+.title{
+    font-family: "poppins", sans-serif;
+
+    padding-top: 20px;
+    padding-left: 30px;
+    font-size: 25px;
+    padding-bottom: 10px;
+
+}
+
+.day-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    transition: height 0.5s ease;
+    background-color: #e4fafd;
+    padding-bottom: 25px;
+    border-radius: 15px;
+}
+
+.day-week{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    border-radius: 20px;
+    width: 85%;
+    height: 300px;
+    font-family: "poppins", sans-serif;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.day-name{
+    margin-left: 10px;
+}
+
+.temperature{
+    margin-right: 10px;
+}
+
+.center-loading{
+    display: flex;
+    justify-content: center;
+}
+
+.loading-screen {
+    width: 85%; 
+    height: 200px;
+    background-color: #e4fafd;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px; 
+    font-family: "poppins", sans-serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    position: relative;
+    top: 20vh;
+    transition: top 0.5s ease;
+    opacity: 0; /* Start invisible */
+    visibility: hidden; /* Prevent interaction */
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite; /* Spinning animation */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
