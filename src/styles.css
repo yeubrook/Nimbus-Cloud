@@ -2,19 +2,25 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow-y: auto;
+    font-family: "poppins", Arial, sans-serif;
 }
 
-body {
+main {
+    min-height: 100vh;
     background: linear-gradient(to right, #00c6ff, #0072ff); /* Background color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 15px;
+    gap: 5px;
 }
 
 form{
     display: flex;
-    position: relative;
-    top: 40vh;
     justify-content: center;
+    align-items: center;
     height: 80px;
-    transition: top 0.5s ease;
 }
 
 .container{
@@ -22,7 +28,7 @@ form{
     justify-content: center;
     align-items: center;
     width: 85%;
-    height: 100%;
+    height: 70px;
     background-color: #e4fafd;
     border-radius: 15px;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4); /* Dark shadow with some blur */
@@ -51,23 +57,45 @@ form{
     background: linear-gradient(to right, #FDC830, #F37335);
 }
 
-.weather-container-container{
-    position: relative;
-    justify-content: center;
-    top: 25vh;
-    opacity: 0; /* Start invisible */
-    visibility: hidden; /* Prevent interaction */
-    transition: opacity 1s ease, visibility 1s ease;
-    display: flex;
+.content{
+    max-height: 0;
+    transition: max-height 0.3s ease, opacity 0.5s ease;
+    overflow: hidden;
 }
-.weather-container-container.visible{
-    position: relative;
-    justify-content: center;
-    top: 25vh;
-    opacity: 0; /* Start invisible */
-    visibility: hidden; /* Prevent interaction */
-    transition: opacity 1s ease, visibility 1s ease;
+
+.content.visible{
+    opacity: 1;
+    visibility: visible;
+    max-height: 900px;
+}
+
+.date-content{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.date-content > .location{
+    margin: 0px;
+    font-size: 40px;
+    color: white;
+    font-weight: 700;
+}
+
+.date-content > .date{
+    margin: 0px;
+    color: white;
+}
+
+.date-content > #time{
+    color: white;
+    margin: 0px;
+    font-size: 40px;
+}
+
+.weather-container-container{
+    justify-content: center;
+    display: flex;            
 }
 
 .weather-container{
@@ -80,9 +108,7 @@ form{
 
 .title{
     font-family: "poppins", sans-serif;
-
     padding-top: 20px;
-    padding-left: 30px;
     font-size: 25px;
     padding-bottom: 10px;
 
@@ -131,7 +157,7 @@ form{
 
 .loading-screen {
     width: 85%; 
-    height: 200px;
+    max-height: 0px;
     background-color: #e4fafd;
     display: flex; 
     flex-direction: column;
@@ -140,15 +166,23 @@ form{
     border-radius: 20px; 
     font-family: "poppins", sans-serif;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
-    position: relative;
-    top: 20vh;
     transition: top 0.5s ease;
-    opacity: 0; /* Start invisible */
-    visibility: hidden; /* Prevent interaction */
-    transition: opacity 1s ease, visibility 1s ease;
+    opacity: 0; 
+    visibility: hidden;
+    transition: max-height 0.4s ease, opacity 1s ease, visibility 1s ease;
+    overflow: hidden;
+    
+}
+
+.loading-screen.visible {
+    max-height: 500px; /* Expand height */
+    opacity: 1; /* Fade in */
+    visibility: visible; /* Allow interaction */
 }
 
 .loader {
+    margin-top: 50px;
+    margin-bottom: 50px;
     border: 8px solid #f3f3f3; /* Light grey */
     border-top: 8px solid #3498db; /* Blue */
     border-radius: 50%;

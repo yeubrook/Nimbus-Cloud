@@ -1,3 +1,9 @@
-export default function loadScreen(){
-    const name = document.querySelector(".center-loading");
+export function loadScreen(){
+    const loading = document.querySelector(".loading-screen");
+    loading.classList.add("visible");
+}
+
+export function hideLoadScreen(){
+    const loading = document.querySelector(".loading-screen");
+    loading.classList.remove("visible");
 }

@@ -1,5 +1,23 @@
+import updateTime from "./UpdateTime";
 
-export default function displayingWeather(dataArr){
+let intervalId;
+
+export const stopClock = () => {
+    clearInterval(intervalId);
+};
+
+export const startClock = (clockDate) => {
+    updateTime(clockDate); 
+    intervalId = setInterval(() => {
+        updateTime(clockDate); // Call updateTime each second
+    }, 1000);
+};
+
+export default function displayingWeather(dataArr, clockDate){
+
+    stopClock();
+    startClock(clockDate);
+
     const daysOfWeek = document.querySelectorAll(".day-week");
     for (let i = 0; i < daysOfWeek.length; i++) {
         if (dataArr[i]) {
@@ -7,11 +25,10 @@ export default function displayingWeather(dataArr){
             daysOfWeek[i].querySelector('.temperature').textContent = `${dataArr[i].temp}°F`;
         }
     }
-    const showContainer = document.querySelector(".weather-container-container");
+    const showContainer = document.querySelector(".content");
     const dayContainer = document.querySelector(".day-container")
     setTimeout(() => {
-        showContainer.style.opacity = "1";
-        showContainer.style.visibility = "visible";
+        showContainer.classList.add("visible");
         console.log("Waited 1 second");
     }, 150); 
     
