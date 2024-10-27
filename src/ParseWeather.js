@@ -6,7 +6,7 @@ export default async function ParsingWeather(dataJSONObject){
 
     const main = document.querySelector("main");
     main.style.justifyContent = "flex-start";
-    main.style.minHeight = "151vh";
+    main.style.minHeight = "161vh";
 
     for (let i = 0; i < 7; i++){
         dataArr[i] = {
