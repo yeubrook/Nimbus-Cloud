@@ -4,6 +4,8 @@ Nimbus Cloud is a sleek and intuitive weather application that delivers real-tim
 
 [Live Preview](https://yeubrook.github.io/Nimbus-Cloud/)
 
+## The Takeaway
+
 Working on Nimbus significantly enhanced my understanding of asynchronous programming in JavaScript, especially through the use of async/await for handling API calls to the VisualCrossing service. This approach made fetching and displaying real-time weather data more efficient.
 
 A major focus was on API integration, which involved crafting dynamic requests based on user input, parsing JSON responses, and updating the user interface seamlessly. This experience improved my ability to work with external data sources within a web application.
