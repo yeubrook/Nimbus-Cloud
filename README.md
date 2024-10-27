@@ -4,7 +4,7 @@ Nimbus Cloud is a sleek and intuitive weather application that delivers real-tim
 
 [Live Preview](https://yeubrook.github.io/Nimbus-Cloud/)
 
-!(https://imgur.com/a/CVbT8bp)
+![](https://imgur.com/a/CVbT8bp)
 
 ## Techstack
 
