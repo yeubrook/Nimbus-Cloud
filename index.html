@@ -3,9 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="84bb4fc080631c2605f1.css">
+    <title>Weather App</title>
 <script defer src="main.js"></script></head>
 <body>
-    <h1></h1>
+    <main>
+        <form class="form">
+            <div class="container">
+                <input type="text" class="search-container" placeholder="Search for a city, state or country..." autofocus required>
+                <button class="search-button" type="submit">
+                    <img src="54ff7732bb1a5ff166c6.svg" alt="" class="magnifying-glass">
+                </button>
+            </div>
+        </form>
+        <div class="center-loading">
+            <div id="loading-screen" class="loading-screen">
+                <div class="loader"></div> <!-- Loader animation -->
+                <p>Loading...</p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="date-content">
+                <p class="location"></p>
+                <p id="time"></p>
+                <p class="date"></p>
+            </div>
+            <div class="grid-container-flex">
+                    <div class="first-box">
+                            <div class="flex-first">
+                                <div class="flex-left">
+                                    <img src="b541ce414b291b629f6e.svg" alt="" class="current-img">
+                                </div>
+                                <div class="flex-right">   
+                                    <p class="temperature" style="font-size: 40px;">
+                                    </p>
+                                    <p class="weather-condition" stlye="font-weight: bold;"></p>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="second-box">
+                        <div class="humidity second">
+                            <div class="flex-container">
+                                <div class="flex-top">
+                                    <p class="category">Humidity</p>
+                                </div>
+                                <div class="flex-bottom">
+                                    <img src="eb3960cab39afbc4bb5e.svg" alt="" class="content-img">
+                                    <p class="humidity-text text"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="windspeed second">
+                            <div class="flex-container">
+                                <div class="flex-top">
+                                    <p class="category">Windspeed</p>
+                                </div>
+                                <div class="flex-bottom">
+                                    <img src="5efb4f08c7dc92d276a3.svg" alt="" class="content-img">
+                                    <p class="windspeed-text text"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="highest-temperature second">
+                            <div class="flex-container">
+                                <div class="flex-top">
+                                    <p class="category">Highest Temperature</p>
+                                </div>
+                                <div class="flex-bottom">
+                                    <img src="072c33a18ea7f4ac7ad9.svg" alt="" class="content-img">
+                                    <p class="highest-temperature-text text"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="third-box">
+                        <div class="sunrise third">
+                            <div class="flex-container">
+                                <div class="flex-top">
+                                    <p class="category">Sunrise</p>
+                                </div>
+                                <div class="flex-bottom">
+                                    <img src="b541ce414b291b629f6e.svg" alt="" class="content-img">
+                                    <p class="sunrise-text text"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sunset third">
+                            <div class="flex-container">
+                                <div class="flex-top">
+                                    <p class="category">Sunset</p>
+                                </div>
+                                <div class="flex-bottom">
+                                    <img src="8565ebfceea3ac2f6713.svg" alt="" class="content-img">
+                                    <p class="sunset-text text"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="weather-container-container">
+                <div class="weather-container">
+                    <div class="day-container">
+                        <div class="title">
+                            WEEKLY FORECAST
+                        </div>
+                        <div class="day-week">
+                            <span class="day-name"></span>
+                            <span class="temperature"></span>
+                        </div>
+                        <div class="day-week">
+                            <span class="day-name"></span>
+                            <span class="temperature"></span>
+                        </div>
+                        <div class="day-week">
+                            <span class="day-name"></span>
+                            <span class="temperature"></span>
+                        </div>
+                        <div class="day-week">
+                            <span class="day-name"></span>
+                            <span class="temperature"></span>
+                        </div>
+                        <div class="day-week">
+                            <span class="day-name"></span>
+                            <span class="temperature"></span>
+                        </div>
+                        <div class="day-week">
+                            <span class="day-name"></span>
+                            <span class="temperature"></span>
+                        </div>
+                        <div class="day-week">
+                            <span class="day-name"></span>
+                            <span class="temperature"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
